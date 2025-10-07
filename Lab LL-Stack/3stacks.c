@@ -61,6 +61,19 @@ int pop(struct stack *ps)
     // Complete the function
     int e = 0;
 
+    // add additional check to ensure the list is not empty
+    if (empty(ps))
+    {
+        return -1;
+    }
+
+    // OR
+
+    if (ps->top == -1)
+    {
+        return -1;
+    }
+
     // get the element at the top index
     e = ps->items[ps->top];
 
