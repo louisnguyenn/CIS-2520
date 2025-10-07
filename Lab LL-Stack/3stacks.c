@@ -48,6 +48,12 @@ int empty(struct stack *ps)
 void push(struct stack *ps, int x)
 {
     // Complete the function
+    // increment the top to the next index
+    ps->top++;
+    // printf("top count: %d", ps->top);
+
+    ps->items[ps->top] = x;
+    printf("items: %d\n", ps->items[ps->top]);
 }
 
 int pop(struct stack *ps)
